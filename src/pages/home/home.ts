@@ -22,22 +22,15 @@ export class HomePage {
   }
 
   loadMap(){
-
-    this.geolocation.getCurrentPosition().then((position) => {
-
-      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
+      let latLng = new google.maps.LatLng(39.8323723, -104.6807757);
+      console.log(latLng)
       let mapOptions = {
         center: latLng,
-        zoom: 15,
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       }
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-    }, (err) => {
-      console.log(err);
-    });
 
   }
 

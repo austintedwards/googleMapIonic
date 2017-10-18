@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import {Geolocation} from '@ionic-native/geolocation'
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {GoogleMaps} from '@ionic-native/google-maps'
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     Geolocation,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
