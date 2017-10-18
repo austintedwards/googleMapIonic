@@ -22,15 +22,27 @@ export class HomePage {
   }
 
   loadMap(){
-      let latLng = new google.maps.LatLng(39.8323723, -104.6807757);
-      console.log(latLng)
+      let latLng = new google.maps.LatLng(39.835, -104.681);
+
       let mapOptions = {
         center: latLng,
-        zoom: 12,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true
       }
 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      let marker = new google.maps.Marker({
+        map: this.map,
+        position: {lat:39.819297, lng:-104.6909675},
+        icon: {
+          url:'../assets/icon/park-dia-icon.png',
+          scaledSize: new google.maps.Size(40, 40)
+        }
+
+        // icon:"../assets/icon/park-dia.icon.png"
+      });
+      console.log(this.map)
 
   }
 
@@ -39,7 +51,8 @@ export class HomePage {
   let marker = new google.maps.Marker({
     map: this.map,
     animation: google.maps.Animation.DROP,
-    position: this.map.getCenter()
+    position: this.map.getCenter(),
+    // icon:"../assets/icon/park-dia.icon.png"
   });
 
   let content = "<h4>Information!</h4>";

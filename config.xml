@@ -85,4 +85,5 @@
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyD4v_SxfnKv_JF2vfZYKqlHV04UTCoOXJs" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyD4v_SxfnKv_JF2vfZYKqlHV04UTCoOXJs" />
     </plugin>
+    <engine name="browser" spec="~4.1.0" />
 </widget>
